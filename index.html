@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="zxx">
+    <head>
+		<script src="assets/js/web3.min.js"></script>
+		
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title> Chance: Take a Chance on yourself </title>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+        
+        <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+        <!--Core CSS -->
+        <link rel="stylesheet" href="assets/css/bulma.css">
+        <link rel="stylesheet" href="assets/css/core.css">
+        <!--Libraries-->
+        <link rel="stylesheet" href="assets/fonts/cryptofont/css/cryptofont.min.css">
+        <link rel="stylesheet" href="assets/js/modalvideo/modal-video.min.css">
+        <link rel="stylesheet" href="assets/js/aos/aos.css">
+		
+		<!--Buy Seku and Total Pot-->
+		<style>
+		::-moz-focus-inner {
+			border: 0;
+			padding: 0;
+		}
+		.mdc-text-field__input::placeholder, input:not([type="submit"])::placeholder, select::placeholder, textarea::placeholder {
+			-webkit-transition: color 180ms cubic-bezier(.4,0,.2,1);
+			transition: color 180ms cubic-bezier(.4,0,.2,1);
+			opacity: 1;
+		}
+		::placeholder {
+			color: #fff;
+			font-size: 15px;
+			opacity: 1;
+		}
+		element {
+			color: #06f9a6;
+		}
+		.mdc-text-field__input, input:not([type="submit"]), select, textarea {
+			font-family: Roboto,sans-serif;
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			letter-spacing: .04em;
+			width: 100%;
+			padding: 0 0 8px;
+			-webkit-transition: opacity 180ms cubic-bezier(.4,0,.2,1);
+			transition: opacity 180ms cubic-bezier(.4,0,.2,1);
+			border: none;
+				border-bottom-color: currentcolor;
+				border-bottom-style: none;
+				border-bottom-width: medium;
+			border-bottom: 1px solid;
+			border-radius: 0;
+			background: 0 0;
+			font-size: inherit;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+		}
+		</style>
+    </head>
+    <body>
+        <!-- Pageloader -->
+        <div class="pageloader is-theme"></div>
+        <div class="infraloader is-active"></div>        
+        <div class="dark-wrapper">
+            <!-- Landing page Hero -->
+            <section class="hero is-fullheight is-transparent">
+                <div class="hero-head">
+        
+                    <!-- Cloned navbar -->
+                    <!-- Cloned navbar that comes in on scroll -->
+                    <nav id="navbar-clone" class="navbar is-fixed is-dark">
+                        <div class="container">
+                            <!-- Brand -->
+                            <div class="navbar-brand">
+                                <a href="index.html" class="navbar-item">
+                                    <img src="assets/images/logo/lucky-cat.png" alt="">
+                                    <span class="brand-name">Chanceth</span>
+                                </a>
+                                <!-- Responsive toggle -->
+                                <span class="navbar-burger burger" data-target="cloneNavbarMenu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+							
+                            <!-- Menu -->
+                            <div id="cloneNavbarMenu" class="navbar-menu">
+                                <div class="navbar-end">
+                                    <!-- Menu item -->
+									<!-- Reddit -->
+                                    <div class="navbar-item is-nav-link">
+                                        <a class="is-centered-responsive" href="https://www.reddit.com/r/chanceth/" target="_blank">
+                                            <img class="telegram" src="assets/images/logo/reddit.png" alt="">
+                                            Reddit
+                                        </a>
+                                    </div>
+                                    <!-- Total Pot -->
+                                    <div class="navbar-item is-nav-link">
+                                        <a href="#" class="button k-button k-primary raised has-gradient slanted">
+                                            <span id="totalPot" class="text">...</span>
+                                            <span class="front-gradient"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- /Cloned navbar -->
+                    <!-- Static navbar -->
+                    <!-- Static navbar -->
+                    <nav class="navbar is-light">
+                        <div class="container">
+                            <!-- Brand -->
+                            <div class="navbar-brand">
+                                <a href="index.html" class="navbar-item">
+                                    <img src="assets/images/logo/lucky-cat.png" alt="">
+                                    <span class="brand-name">Chanceth</span>
+                                </a>
+                                <!-- Responsive toggle -->
+                                <span class="navbar-burger burger" data-target="navbarMenu">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+							
+                            <!-- Menu -->
+                            <div id="navbarMenu" class="navbar-menu light-menu">
+                                <div class="navbar-end">
+                                    <!-- Menu item -->
+									<!-- Reddit -->
+                                    <div class="navbar-item is-nav-link">
+                                        <a class="is-centered-responsive" href="https://www.reddit.com/r/chanceth/" target="_blank">
+                                            <img class="telegram" src="assets/images/logo/reddit.png" alt="">
+                                            Reddit
+                                        </a>
+                                    </div>
+                                    <!-- Total Pot -->
+                                    <div class="navbar-item">
+                                        <a href="#" class="button k-button k-primary raised has-gradient slanted">
+                                            <span id="totalPot2" class="text">...</span>
+                                            <span class="front-gradient"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <!-- /Static navbar -->
+                </div>
+        
+                <!-- Animated particles -->
+                <div id="particles-js"></div>
+        
+                <!-- Hero Image and Title -->
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="columns is-vcentered">
+        
+                            <!-- Landing page Title -->
+                            <div class="column is-5 landing-caption">
+                                <h1 class="title is-1 is-light is-semibold is-spaced main-title">Take a chance on yourself.</h1>
+                                <h2 class="subtitle is-6 is-light is-thin">
+                                    You should take a risk as you can ignore. 
+                                </h2>
+                            </div>
+							
+                            <!-- Buy Seku Shortcut -->
+                            <div class="column is-7">
+								<div class="ico-card animated preFadeInUp fadeInUp">
+									<input id="amountSEKU" name="buySEKU" style="color: #06f9a6;" onkeydown="validateNumber(event);" placeholder="Type the amount of SEKU you want to buy: (Max 200)">
+									<br><br>
+									<input id="ref" name="reference" style="color: #06f9a6;" onkeydown="validateNumber(event);" placeholder="Reference: ">
+									<br><br>
+									<div id="buy" type="button" value="Buy" onclick="buySeku((document.getElementById('amountSEKU').value),(document.getElementById('ref').value));" class="button-block">
+										<a  class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
+											<span class="text" >Buy Seku</span>
+											<span class="front-gradient"></span>
+										</a>
+									</div>
+								</div>
+								
+								<!--
+								<figure class="image">
+                                    <img src="assets/images/illustrations/world.svg" alt="">
+                                </figure>
+								-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+            <!-- Icon Features section -->
+            <section id="start" class="section is-transparent is-relative">
+                <!-- Container -->
+                <div class="container">
+                    <div class="has-text-centered">
+                        <div class="buy-title">We Accept Only (For now)</div>
+                        <div class="accepted-currencies">
+                            <div>
+                                <i class="cf cf-eth"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Content wrapper -->
+                    <div class="content-wrapper is-medium">
+                        <div class="columns is-vcentered">
+                            <!-- Feature -->
+                            <div class="column is-4">
+                                <div class="feature">
+                                    <img src="assets/images/icons/openSource.png" alt="" data-aos="fade-up" data-aos-delay="100" data-aos-offset="200" data-aos-easing="ease-out-quart">
+                                    <h4 class="title is-6 is-tight is-light">Open Source</h4>
+                                    <p>We believe bet systems should be fair and reliable to participants.</p>
+                                </div>
+                            </div>
+                            <!-- Feature -->
+                            <div class="column is-4">
+                                <div class="feature">
+                                    <img src="assets/images/icons/fair.png" alt="" data-aos="fade-up" data-aos-delay="300" data-aos-offset="200" data-aos-easing="ease-out-quart">
+                                    <h4 class="title is-6 is-tight is-light">Fair</h4>
+                                    <p>Our system uses a strong algorithm to pick a lucky cat with full of reliability.</p>
+                                </div>
+                            </div>
+                            <!-- Feature -->
+                            <div class="column is-4">
+                                <div class="feature">
+                                    <img src="assets/images/icons/transparency.png" alt="" data-aos="fade-up" data-aos-delay="500" data-aos-offset="200" data-aos-easing="ease-out-quart">
+                                    <h4 class="title is-6 is-tight is-light">Transparency</h4>
+                                    <p>All transaction on Ethereum network with smart contract system and will be recorded.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Content wrapper -->
+                </div>
+                <!-- /Container -->
+            </section>
+            <!-- /Icon Features section -->
+        
+            <!-- Side Features section -->
+            <section id="big-gradient" class="section is-transparent">
+                <!-- Container -->
+                <div class="container">
+                    <!-- Divider -->
+                    <div class="divider is-centered"></div>
+                    <!-- Title & subtitle -->
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Open Source</h2>
+                    <h4 class="subtitle is-6 is-light has-text-centered is-compact">We share our website's codes on Github, and our smart contract on Etherscan. We believe in open source and Ethereum smart contract power. If we need to talk about smart contract, we can say a it is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible. </h4>
+        
+                    <!-- Content wrapper -->
+                    <div class="content-wrapper is-large">
+                        <div class="columns is-vcentered">
+        
+                            <!-- Feature content -->
+                            <div class="column is-5 is-offset-1">
+                                <div class="side-feature-content">
+                                    <h3 class="title is-4 is-light"><img src="assets/images/icons/modernDesign.png" alt=""> <span>Enjoy the modern design</span></h3>
+                                    <div class="divider is-long"></div>
+                                    <p class="is-light">Our system is created with minimalism and we focus on easy to use for crypto funs. We make transaction through Metamask extension for simplicity on our user-friendly web-site. You can use our bet system easily without sign up.</p>
+                                </div>
+                            </div>
+        
+                            <!-- Feature image -->
+                            <div class="column is-7">
+                                <img class="side-feature" src="assets/images/illustrations/metamask.png" alt="">
+                            </div>
+                        </div>
+        
+                        <div class="columns is-vcentered">
+                            <!-- Feature image desktop -->
+                            <div class="column is-7 is-hidden-mobile">
+                                <img class="side-feature" src="assets/images/illustrations/luckyCat.png" alt="">
+                            </div>
+        
+                            <!-- Feature content -->
+                            <div class="column is-5">
+                                <div class="side-feature-content">
+                                    <h3 class="title is-4 is-light"><img src="assets/images/icons/ourStory.png" alt=""> <span>Our story</span></h3>
+                                    <div class="divider is-long"></div>
+                                    <p class="is-light">We would love to make safe lottery with Ethereum’s smart contract. We are students who love to learn new technologies. We would love to present our new lottery system that can earn you money. So you can be happy. Good luck and take a chance on yourself.</p>
+                                </div>
+                            </div>
+        
+                            <!-- Feature image only for mobile -->
+                            <div class="column is-7 is-hidden-desktop is-hidden-tablet">
+                                <img class="side-feature" src="assets/images/illustrations/luckyCat.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Content wrapper -->
+                </div>
+                <!-- /Container -->
+            </section>
+            <!-- /Side Features section -->
+        
+            <!-- ICO section -->
+            <section class="section is-medium is-end">
+                <!-- Container -->
+                <div class="container">
+                    <!-- Divider -->
+                    <div class="divider is-centered"></div>
+                    <!-- Title & subtitle -->
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Buy Seku</h2>
+                    <h4 class="subtitle is-6 is-light has-text-centered is-compact">First of all, connect your Metamask account, type how much amount SEKU you want to buy then enter the reference number if you have one and lastly you can purchase it. Congratulations you are in.</br>(1 SEKU = 0.001 ETH)</h4>
+        
+                    <!-- Content wrapper -->
+                    <div class="content-wrapper is-large">
+        
+                        <!-- Flying tabs wrapper -->
+                        <div class="flying-wrapper">
+                            <!-- Tabs container -->
+                            <div class="flying-tabs-container">
+                                <!-- Tabs -->
+                                <div class="flying-tabs">
+                                    <div class="flying-child tab-1 is-active" data-tab="tab-1"><a href="javascript:void(0);">Buy Seku</a></div>
+                                    <div class="flying-child tab-2" data-tab="tab-2"><a href="javascript:void(0);">Your Reference</a></div>
+                                    <div class="flying-child tab-3" data-tab="tab-3"><a href="javascript:void(0);">Our Smart Contract</a></div>
+                                    <div class="flying-child tab-4" data-tab="tab-4"><a href="javascript:void(0);">Chat Group</a></div>
+                                    <div class="slider"></div>
+                                </div>
+                            </div>
+        
+                            <!-- Tabs content wrapper -->
+                            <div class="flying-tabs-content">
+                                <!-- Tab 1 -->
+                                <div id="tab-1" class="tab-content is-active">
+                                    <div class="columns is-vcentered tab-content-wrapper">
+                                        <div class="column is-5 is-offset-1">
+                                            <div class="text-content">
+                                                <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">Your Account</h4>
+                                                <ul class="custom-bullet-list">
+													<h5 class="title2" style="color: #c7ddf3;" id="addressOfFrom">is loading...</h5>
+													
+                                                    <li class="animated preFadeInUp fadeInUp">
+                                                        <span>If Account disappear</span>
+                                                        <br>
+                                                        <span class="item-content">If your account doesn't appear, you probably forgot to open your Metamask. </span>
+                                                    </li>
+													<li class="animated preFadeInUp fadeInUp">
+                                                        <span>Check transactions</span>
+                                                        <br>
+                                                        <span class="item-content">Check transaction history on <a target="_blank" href="https://kovan.etherscan.io/address/0xC38ceC92e1EDc243F82bc4Cb13C64024AAb04CdC">Etherscan.</a></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="column is-5">
+                                            <div class="ico-card animated preFadeInUp fadeInUp">
+                                                <input id="amountSEKU" name="buySEKU" style="color: #06f9a6;" onkeydown="validateNumber(event);" placeholder="Type the amount of SEKU you want to buy: (Max 200)">
+												<br><br>
+												<input id="ref" name="reference" style="color: #06f9a6;" onkeydown="validateNumber(event);" placeholder="Reference: ">
+												<br><br>
+                                                <div id="buy" type="button" value="Buy" onclick="buySeku((document.getElementById('amountSEKU').value),(document.getElementById('ref').value));" class="button-block">
+                                                    <a  class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
+                                                        <span class="text" >Buy Seku</span>
+                                                        <span class="front-gradient"></span>
+                                                    </a>
+                                                </div>
+                                                <div class="icon-block">    
+                                                    <i class="cf cf-eth"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Tab 1 -->
+        
+                                <!-- Tab 2 -->
+                                <div id="tab-2" class="tab-content">
+                                    <div class="columns is-vcentered tab-content-wrapper">
+                                        <div class="column is-5 is-offset-1">
+                                            <div class="text-content">
+                                                <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">Reference</h4>
+                                                <ul class="custom-bullet-list">
+                                                    <li class="animated preFadeInUp fadeInUp">
+                                                        <span>Get Extra Seku</span>
+                                                        <br>
+                                                        <span class="item-content">If somebody buys seku with your reference, you will gain 25% from their shopping.</span>
+                                                    </li>
+                                                    <li class="animated preFadeInUp fadeInUp">
+                                                        <span>Rule</span>
+                                                        <br>
+                                                        <span class="item-content">Only required your buying must be greater than your reference's buying.</span> 
+                                                    </li>
+                                                    <li class="animated preFadeInUp fadeInUp">
+                                                        <span>Your Reference:</span>
+                                                        <br>
+                                                        <span class="title2" id="yourRef">is loading...</span>
+														<div id="copy" type="button" style="padding: 5px 10px; float: right; margin-top: 15px;" value="copy" onclick="copyToClipboard('#yourRef')"class="button-block">
+															<a  class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
+																<span class="text" >Copy Reference</span>
+																<span class="front-gradient"></span>
+															</a>
+														</div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="column is-5">
+                                            <img style="margin: center;padding-left: 150px;"class="animated preFadeInUp fadeInUp" src="assets/images/illustrations/bounty.svg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Tab 2 -->
+        
+                                <!-- Tab 3 -->
+                                <div id="tab-3" class="tab-content">
+                                    <div class="columns is-vcentered tab-content-wrapper">
+                                        <div class="column is-5 is-offset-1" style="width:90%!important;">
+                                            <div class="text-content">
+                                                <h4 class="title is-6 is-light animated preFadeInUp fadeInUp">Our Smart Contract</h4>			
+												<script src="https://gist.github.com/Chanceth/7ef373060fded23e750f062f4466983a.js">
+												</script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /Tab 3 -->
+        
+                                <!-- Tab 4 -->
+                                <div id="tab-4" class="tab-content">
+                                    <div class="columns is-vcentered tab-content-wrapper">
+										<div class="column is-5 is-offset-1" style="width:90%!important;">
+                                            <div class="text-content">
+                                                <h4 class="title is-6 is-light animated preFadeInUp fadeInUp"><center>Soon</center></h4>
+											</div>
+										</div>
+									</div>
+                                </div>
+                                <!-- /Tab 4 -->
+                            </div>
+                        </div>
+        
+                    </div>
+                    <!-- Content wrapper -->
+                </div>
+                <!-- /Container -->
+            </section>
+            <!-- /ICO section -->
+			
+            <!-- Company section -->
+            <section class="section is-medium has-big-dark-gradient">
+                <!-- Container -->
+                <div class="container">
+                    <!-- Divider -->
+                    <div class="divider is-centered"></div>
+                    <!-- Title & subtitle -->
+                    <h2 class="title is-light is-semibold has-text-centered is-spaced">Our Lucky Cats</h2>
+                    <h4 class="subtitle is-6 is-light has-text-centered is-compact">How much our lucky cats gain ?</h4>
+        
+                    <!-- Content wrapper -->
+                    <div class="content-wrapper is-large">
+                        <div class="columns is-vcentered">
+                            <div class="column is-hidden-mobile"></div>
+                            <!-- Winner 1 -->
+                            <div class="column is-3">
+                                <div class="team-member-container">
+                                    <!-- Card -->
+                                    <div class="dark-card">
+                                        <!-- Avatar wrapper -->
+                                        <div class="avatar">
+                                            <!-- Svg circle -->
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Track -->
+                                                <circle class="circle-chart-background" stroke-width="1" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <!-- Stroke -->
+                                                <circle class="circle-chart-circle" stroke-width="1" stroke-dasharray="33,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                            </svg>
+                                            <!-- Sketeched face -->
+                                            <img class="is-sketch" src="assets/images/winner/john.svg" alt="">
+                                            <!-- Real face -->
+                                            <img class="is-real" src="assets/images/winner/winner1.png" alt="">
+                                        </div>
+                                        <!-- Member meta -->
+                                        <div class="member-info">
+                                            <h4 class="title is-light is-6 is-tight">Winner 1</h4>
+                                            <div class="position">1st Lucky Cat</div>
+                                            <p class="description">50%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Team member -->
+                            <div class="column is-3">
+                                <div class="team-member-container">
+                                    <div class="dark-card">
+                                        <div class="avatar">
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="circle-chart-background" stroke-width="1" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <circle class="circle-chart-circle" stroke-width="1" stroke-dasharray="33,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                            </svg>
+                                            <img class="is-sketch" src="assets/images/winner/lucy.svg" alt="">
+                                            <img class="is-real" src="assets/images/winner/winner2.png" alt="">
+                                        </div>
+                                        <div class="member-info">
+                                            <h4 class="title is-light is-6 is-tight">Winner 2</h4>
+                                            <div class="position">2nd Lucky Cat</div>
+                                            <p class="description">25%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Team member -->
+                            <div class="column is-3">
+                                <div class="team-member-container">
+                                    <div class="dark-card">
+                                        <div class="avatar">
+                                            <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+                                                <circle class="circle-chart-background" stroke-width="1" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                                <circle class="circle-chart-circle" stroke-width="1" stroke-dasharray="33,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                            </svg>
+                                            <img class="is-sketch" src="assets/images/winner/joshua.svg" alt="">
+                                            <img class="is-real" src="assets/images/winner/winner3.png" alt="">
+                                        </div>
+                                        <div class="member-info">
+                                            <h4 class="title is-light is-6 is-tight">Winner 3</h4>
+                                            <div class="position">3rd Luck Cat</div>
+                                            <p class="description">5%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="column is-hidden-mobile"></div>
+                        </div>
+        
+                        <!-- Spaced divider -->
+                        <div class="divider is-centered is-spacer"></div>
+						
+						<!-- Title & subtitle -->
+                   		<h2 class="title is-light is-semibold has-text-centered is-spaced">FAQ</h2>
+                   		<h4 class="subtitle is-6 is-light has-text-centered is-compact">This part contains your questions which mostly we received from you.</h4>
+        
+                    	<!-- Content wrapper -->
+                    	<div class="content-wrapper is-large">
+                        	<div class="columns">
+                            	<div class="column is-5 is-offset-1">
+                                	<!-- Accordion -->
+                                	<div class="accordion">
+                                    	<!-- Option -->
+                                    	<div class="accordion-option">
+                                        	<input type="checkbox" id="toggle1" class="accordion-toggle" />
+                                        	<label class="accordion-title" for="toggle1">
+                                            What is Ethereum ?
+                                        	</label>
+                                        	<div class="accordion-content">
+                                            	<p>Ethereum is an open-source, public, blockchain-based distributed computing platform and operating system featuring smart contract functionality. It supports a modified version of Nakamoto consensus via transaction-based state transitions.</p>
+                                        	</div>
+                                    	</div>
+										<!-- Option -->
+										<div class="accordion-option">
+											<input type="checkbox" id="toggle3" class="accordion-toggle" />
+											<label class="accordion-title" for="toggle3">
+												What is SEKU ?
+											</label>
+											<div class="accordion-content">
+												<p>SEKU is our ticket that provides you can join our system.</p>
+											</div>
+										</div>
+										<!-- Option -->
+										<div class="accordion-option">
+											<input type="checkbox" id="toggle2" class="accordion-toggle" />
+											<label class="accordion-title" for="toggle2">
+												What is Smart Contract ?
+											</label>
+											<div class="accordion-content">
+												<p>A smart contract is a computer protocol intended to digitally facilitate, verify, or enforce the negotiation or performance of a contract. Smart contracts allow the performance of credible transactions without third parties. These transactions are trackable and irreversible.</p>
+											</div>
+										</div>
+                                	</div>
+                                <!-- /Accordion -->
+                            	</div>
+        
+                            	<div class="column is-5">
+									<!-- Accordion -->
+									<div class="accordion">
+										<!-- Option -->
+										<div class="accordion-option">
+											<input type="checkbox" id="toggle6" class="accordion-toggle" />
+											<label class="accordion-title" for="toggle6">
+												How much ethereum percent in total pot gain lucky cats ?
+											</label>
+											<div class="accordion-content">
+												<p>First one gets 50%, second one 25% and finally third one gets 5%.</p>
+											</div>
+										</div>
+        
+										<!-- Option -->
+										<div class="accordion-option">
+											<input type="checkbox" id="toggle7" class="accordion-toggle" />
+											<label class="accordion-title" for="toggle7">
+												What happens if nobody wins ?
+											</label>
+											<div class="accordion-content">
+												<p>This is not an option.</p>
+											</div>
+										</div>
+        
+										<!-- Option -->
+										<div class="accordion-option">
+											<input type="checkbox" id="toggle8" class="accordion-toggle" />
+											<label class="accordion-title" for="toggle8">
+												How much fee we take ?
+											</label>
+											<div class="accordion-content">
+												<p>Just only 10%.</p>
+											</div>
+										</div>
+									</div>
+									<!-- /Accordion -->
+								</div>
+							</div>
+						</div>
+                    </div>
+                    <!-- /Content wrapper -->
+                </div>
+            </section>
+        
+        <footer class="krypton-footer">
+            <div class="container">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <a href="#">
+                        <img src="assets/images/logo/lucky-cat.png" alt="">
+                        <div class="brand-name">Chance</div>
+                        <div class="brand-subtitle">Take a chance on yourself</div>
+                    </a>
+                </div>
+				
+                <!-- Copyright -->
+                <p class="k-copyright">© 2018 | Chance.</p>
+                <br>
+                <!-- Made by -->
+                <p class="coded-by">Template designed and coded by <a href="https://cssninja.io" target="_blank">Css Ninja</a></p>
+            </div>
+            
+            <!-- Absolute image -->
+            <img class="solar-system" src="assets/images/bg/solar.svg" alt="">
+        </footer>    
+			
+		<!-- Core js -->
+        <script src="assets/js/app.js"></script>
+        <!--script src="assets/js/particlesjs/particles.min.js"></script-->
+        <script src="assets/js/aos/aos.js"></script>
+        
+        <script src="assets/js/main.js" defer="defer"></script>        
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+			
+		<!-- Web3 -->
+		<script>
+		if (typeof web3 !== 'undefined') {
+			web3 = new Web3(web3.currentProvider);
+		} else {
+			alert("You must install Metamask extension your browser!");
+			
+			web3 = new Web3(new Web3.providers.HttpProvider("chanceth.github.io"));
+		}
+
+		var contract = new web3.eth.Contract([{"constant":true,"inputs":[],"name":"reflink","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"participants","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"pot","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"sekus","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"invitation","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"amount","type":"uint256"},{"name":"ref","type":"uint256"}],"name":"buySEKU","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"withdrawal","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getref","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":false,"name":"target","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"nrOfParticipants","type":"uint256"},{"indexed":false,"name":"sekus","type":"uint256"}],"name":"Payout","type":"event"}], '0xC38ceC92e1EDc243F82bc4Cb13C64024AAb04CdC');
+
+		var promise1 = Promise.resolve(web3.eth.getBalance(contract.options.address));
+		promise1.then(function(value) {
+			document.getElementById('totalPot').innerHTML = "Total Pot: " + (value)/10**18 + " ETH";
+			document.getElementById('totalPot2').innerHTML = "Total Pot: " + (value)/10**18 + " ETH";
+		});
+
+		var promise2 = Promise.resolve(web3.eth.getAccounts());
+		promise2.then(function(buyer_address) {
+			document.getElementById('addressOfFrom').innerHTML = buyer_address;
+			return buyer_address;
+		});
+
+		setTimeout(getref, 500);
+
+		function getref() { 
+			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
+			promise3.then(function(buyer_ref_value) {
+				document.getElementById('yourRef').innerHTML = buyer_ref_value;
+				console.log(buyer_ref_value);
+			});
+		}
+
+		function copyToClipboard(element) {
+			var $temp = $("<input>");
+			$("body").append($temp);
+			$temp.val($(element).text()).select();
+			document.execCommand("copy");
+			$temp.remove();
+			alert("You copied the reference.");
+		}
+
+		function validateNumber(evt) {
+			var e = evt || window.event;
+			var key = e.keyCode || e.which;
+
+			if (!e.shiftKey && !e.altKey  && 
+			// Numbers   
+			key >= 48 && key <= 57 ||
+			// Numeric keypad
+			key >= 96 && key <= 105 ||
+			// Backspace and Tab and Enter
+			key == 8 || key == 9 || key == 13 ||
+			// Home and End
+			key == 35 || key == 36 ||
+			// left and right arrows
+			key == 37 || key == 39 ||
+			// Del and Ins
+			key == 46 || key == 45 ||
+			// Ctrl+C and Ctrl+X
+			key == 17 || key == 86) {
+			// input is VALID
+			}
+			else {
+				// input is INVALID
+				e.returnValue = false;
+				if (e.preventDefault) e.preventDefault();
+				}
+		}
+
+		function buySeku(_value,_ref){
+			if(0>_value || _value>200){
+				alert("You must enter a number between 0 and 200.");
+				throw "exit";      
+			}
+			if(_ref==document.getElementById('yourRef').innerHTML){
+				alert("You can't use own reference.");
+				throw "exit";  
+			}
+
+			var getData = contract.methods.buySEKU(_value,_ref).encodeABI();
+			var tx = web3.eth.sendTransaction({ 
+			to: contract.options.address,
+			from: document.getElementById('addressOfFrom').textContent,
+			value: web3.utils.toWei(_value, 'finney'),            
+			data: getData
+			}, function(err, transactionHash) {
+			if (!err)
+				console.log(transactionHash); 
+			})
+		}
+
+		 $(function() {
+				$('.scroll-down').click (function() {
+				  $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
+				  return false;
+				});
+			  });
+		</script>
+    </body>
+</html>
