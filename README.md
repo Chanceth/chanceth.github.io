@@ -1,6 +1,6 @@
 # chanceth.github.io
 
-Our system and Reddit will be open for everyone soon as possible. Thank you for understanding and have a lucky day!
+Our system, Reddit and chat will be open for everyone soon as possible. Thank you for understanding and have a lucky day!
 
 What is Ethereum ?
 Ethereum is an open-source, public, blockchain-based distributed computing platform and operating system featuring smart contract functionality. It supports a modified version of Nakamoto consensus via transaction-based state transitions.
