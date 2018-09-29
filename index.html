@@ -674,7 +674,8 @@
 		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
 			promise3.then(function(buyer_ref_value) {
-				document.getElementById('yourRef').innerHTML = buyer_ref_value;
+				document.getElementById('yourRef').innerHTML = "https://chanceth.github.io/index.html#" + buyer_ref_value;
+				//document.getElementById('yourRef').innerHTML = buyer_ref_value;
 				console.log(buyer_ref_value);
 			});
 		}
@@ -737,13 +738,22 @@
 				console.log(transactionHash); 
 			})
 		}
-
+		
 		 $(function() {
 				$('.scroll-down').click (function() {
 				  $('html, body').animate({scrollTop: $('section.ok').offset().top }, 'slow');
 				  return false;
 				});
 			  });
+			
+		//Reference
+		var gerSegment = window.location.hash;
+		subsegment = gerSegment.substring(1);
+		var ref = Number(subsegment);
+
+		if(typeof ref == 'number' && ref!=0){
+			document.getElementById("ref").value = ref;
+		}
 		</script>
     </body>
 </html>
