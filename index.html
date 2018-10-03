@@ -669,7 +669,7 @@
 			return buyer_address;
 		});
 
-		setTimeout(getref, 500);
+		setTimeout(getref, 700);
 
 		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
