@@ -337,7 +337,7 @@
 													<li class="animated preFadeInUp fadeInUp">
                                                         <span>Check transactions</span>
                                                         <br>
-                                                        <span class="item-content">Check transaction history on <a target="_blank" href="https://kovan.etherscan.io/address/0xC38ceC92e1EDc243F82bc4Cb13C64024AAb04CdC">Etherscan.</a></span>
+                                                        <span class="item-content">Check transaction history on <a target="_blank" href="https://etherscan.io/address/0x042b6475e8e0b8b12d001e2eafb036bbea0c4e52">Etherscan.</a></span>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -669,7 +669,7 @@
 			return buyer_address;
 		});
 
-		setTimeout(getref, 1000);
+		setTimeout(getref, 2000);
 
 		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
