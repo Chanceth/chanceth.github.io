@@ -668,20 +668,16 @@
 			document.getElementById('addressOfFrom').innerHTML = buyer_address;
 		});
 
-		function sleep(ms) {
-  			return new Promise(resolve => setTimeout(resolve, ms));
-		}
+		setTimeout(getref, 2000);
 
-		async function timee() {
-		 	await sleep(2000);
+		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
 			promise3.then(function(buyer_ref_value) {
 				document.getElementById('yourRef').innerHTML = "https://chanceth.github.io/index.html#" + buyer_ref_value;
 				//document.getElementById('yourRef').innerHTML = buyer_ref_value;
+				console.log(buyer_ref_value);
 			});
 		}
-
-		timee();
 
 		function copyToClipboard(element) {
 			var $temp = $("<input>");
