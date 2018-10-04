@@ -673,16 +673,15 @@
 		}
 
 		async function timee() {
-		  await sleep(2000);
+		 	await sleep(2000);
+			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
+			promise3.then(function(buyer_ref_value) {
+				document.getElementById('yourRef').innerHTML = "https://chanceth.github.io/index.html#" + buyer_ref_value;
+				//document.getElementById('yourRef').innerHTML = buyer_ref_value;
+			});
 		}
 
 		timee();
-		
-		var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
-		promise3.then(function(buyer_ref_value) {
-			document.getElementById('yourRef').innerHTML = "https://chanceth.github.io/index.html#" + buyer_ref_value;
-			//document.getElementById('yourRef').innerHTML = buyer_ref_value;
-		});
 
 		function copyToClipboard(element) {
 			var $temp = $("<input>");
