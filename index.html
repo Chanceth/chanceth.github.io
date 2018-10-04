@@ -383,7 +383,7 @@
                                                     <li class="animated preFadeInUp fadeInUp">
                                                         <span>Your Reference:</span>
                                                         <br>
-                                                        <span class="item-content" id="yourRef" onclick="getref()">is loading...</span>
+                                                        <span class="item-content" id="yourRef">is loading...</span>
 														<div id="copy" type="button" style="padding: 5px 10px; float: right; margin-top: 15px;" value="copy" onclick="copyToClipboard('#yourRef')"class="button-block">
 															<a  class="button k-button k-secondary raised has-gradient is-bold is-fullwidth rounded">
 																<span class="text" >Copy</span>
@@ -669,7 +669,7 @@
 			return buyer_address;
 		});
 
-		setTimeout(getref, 2000);
+		setTimeout(getref, 5000);
 
 		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
