@@ -668,16 +668,15 @@
 			document.getElementById('addressOfFrom').innerHTML = buyer_address;
 		});
 
-		function sleep(milliseconds) {
-		  var start = new Date().getTime();
-		  for (var i = 0; i < 1e7; i++) {
-		    if ((new Date().getTime() - start) > milliseconds){
-		      break;
-		    }
-		  }
+		function sleep(ms) {
+  			return new Promise(resolve => setTimeout(resolve, ms));
 		}
-			
-		sleep(2000);
+
+		async function timee() {
+		  await sleep(2000);
+		}
+
+		timee();
 		
 		var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
 		promise3.then(function(buyer_ref_value) {
