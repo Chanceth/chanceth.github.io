@@ -666,21 +666,17 @@
 		var promise2 = Promise.resolve(web3.eth.getAccounts());
 		promise2.then(function(buyer_address) {
 			document.getElementById('addressOfFrom').innerHTML = buyer_address;
-			return buyer_address;
 		});
 
-		//setTimeout(getref, 5000);
+		setTimeout(getref, 2000);
 
 		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
 			promise3.then(function(buyer_ref_value) {
 				document.getElementById('yourRef').innerHTML = "https://chanceth.github.io/index.html#" + buyer_ref_value;
 				//document.getElementById('yourRef').innerHTML = buyer_ref_value;
-				return "https://chanceth.github.io/index.html#" + buyer_ref_value;
 			});
 		}
-			
-		getref();
 
 		function copyToClipboard(element) {
 			var $temp = $("<input>");
