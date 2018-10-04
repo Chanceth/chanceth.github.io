@@ -669,7 +669,7 @@
 			return buyer_address;
 		});
 
-		setTimeout(getref, 5000);
+		//setTimeout(getref, 5000);
 
 		function getref() { 
 			var promise3 = Promise.resolve(contract.methods.getref().call({from:document.getElementById('addressOfFrom').textContent}));
@@ -679,6 +679,8 @@
 				return "https://chanceth.github.io/index.html#" + buyer_ref_value;
 			});
 		}
+			
+		getref();
 
 		function copyToClipboard(element) {
 			var $temp = $("<input>");
